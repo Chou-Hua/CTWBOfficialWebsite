@@ -1,0 +1,42 @@
+.nav-center{
+    text-align: center;
+    margin:0 auto;
+    color: black;
+
+  }
+.bar-color{
+    background-color: white;
+}
+.logo{
+  width:  "200px";
+  height: "100px";
+  cursor: pointer;  
+}
+.footer{
+  display: flex;
+  position: relative;
+  align-items: center;
+  background-color: orange;
+  
+}
+.logo-text{
+  font-weight: bold;
+  font-size: 40px;
+  color: white;  
+}
+.footer-right{    
+  font-weight: bold;
+  margin-right: 20px;
+  float: right !important;
+}
+.footer-left{
+  float: left !important;
+}
+.footer-text{  
+  font-size: 20px;
+  color: white;
+}
+.icon-size{
+  font-size: 50px;
+  cursor: pointer;
+}
