@@ -1,38 +1,59 @@
+.d-flex{
+  display: flex !important;
+}
+//Header
 .nav-center{
     text-align: center;
-    margin:0 auto;
+    margin:auto;
     color: black;
 
   }
 .bar-color{
+    display: flex;
     background-color: white;
 }
 .logo{
-  width:  "200px";
-  height: "100px";
-  cursor: pointer;  
+  cursor: pointer;
 }
 .footer{
   display: flex;
   position: relative;
   align-items: center;
   background-color: orange;
-  
+
 }
 .logo-text{
   font-weight: bold;
   font-size: 40px;
-  color: white;  
+  color: white;
 }
-.footer-right{    
+.btn-dropdown{
+  font-weight: 500;
+  font-size: 14px;
+  color: black;
+  &:hover{
+    color: orange;
+  }
+  // .q-btn__content .q-icon {
+  //   display: none;
+  // }
+}
+.btn-menu{
+  font-weight: 500;
+  font-size: 14px;
+  color: black;
+  &:hover{
+    color: orange;
+  }
+}
+
+//Footer
+.footer-right{
   font-weight: bold;
   margin-right: 20px;
   float: right !important;
 }
-.footer-left{
-  float: left !important;
-}
-.footer-text{  
+.footer-text{
   font-size: 20px;
   color: white;
 }
@@ -40,3 +61,5 @@
   font-size: 50px;
   cursor: pointer;
 }
+
+

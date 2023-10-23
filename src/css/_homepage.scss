@@ -1,0 +1,53 @@
+.homepage-title-text{
+  background-position: center;
+  transition-property: opacity;
+  color: white;
+  position: relative;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.homepage-title-text::after {
+  content: "";
+  position: absoulte;
+  background: url(../assets/image1.png);
+  background-size: cover;
+  background-position: center;
+  width: 99vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.ch-title{
+  font-weight: bold !important;
+  font-size: 74px;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: fadeInRight;
+}
+.en-title{
+  font-weight: bold !important;
+  font-size: 30px;
+  padding-left: 10px;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: fadeInRight;
+}
+.main-title{
+  margin: auto;
+}
+.work-space.img{
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: fadeInLeft;
+}
+.image-container{
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-name: fadeInLeft;
+}

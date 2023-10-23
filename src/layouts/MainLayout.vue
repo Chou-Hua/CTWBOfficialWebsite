@@ -10,8 +10,8 @@
 
 <script setup>
 import { defineComponent, ref } from 'vue'
-import Header from 'src/components/Header.vue';
-import FooterVue from 'src/components/Footer.vue';
+import Header from 'src/pages/Header.vue';
+import FooterVue from 'src/pages/Footer.vue';
 
 
 
