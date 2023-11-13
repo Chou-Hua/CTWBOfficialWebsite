@@ -7,7 +7,7 @@
     :padding=setPadding
     :label="label"
     v-model="menu"
-    to="/abc"
+    @click="btnClick()"
     class="btn-dropdown"
     @mouseover.enter="menuOver = true"
     @mouseout.enter="menuOver = false"
@@ -18,7 +18,7 @@
     >
       <q-item clickable v-for="(item,index) in itemsArray" :key="index">
         <q-item-section>
-          <q-item-label @click=goToActive(item)>{{ item.name }}</q-item-label>
+          <q-item-label @click=clickDropDown()>{{ item.name }}</q-item-label>
         </q-item-section>
       </q-item>
     </q-list>
@@ -30,21 +30,26 @@ import { ref, watch } from "vue";
 import { debounce } from "quasar";
 import { useRouter } from 'vue-router';
 
-
+const btnClick = ()=>{
+  emit('btnClick')
+}
+const clickDropDown = ()=>{
+  emit('clickDropDown')
+}
 const menu = ref(false);
 const menuOver = ref(false);
 const listOver = ref(false);
-
+const emit = defineEmits([
+  'btnClick',
+  'clickDropDown'
+])
 const props = defineProps({
   itemsArray: String,
   label: String,
   setPadding: String
-
 });
 const router = useRouter();
-const goToActive = (item) => {
-  router.push('/')
-}
+
 // 创建一个防抖函数
 const debounceFunc = debounce(() => {
   checkMenu();

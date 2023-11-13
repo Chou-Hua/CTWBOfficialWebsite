@@ -1,0 +1,77 @@
+.team-title{
+  font-size: 60px;
+  color: white;
+  background-size: cover;
+  background: url(../assets/about-title.png);
+  position: absoulte;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  font-weight: bold;
+}
+.player-background{
+  background: url("../assets/playerBackground.webp");
+  background-size: cover;
+  width: 100%;
+  height: 874px;
+}
+.player-background1{
+  background: url("../assets/playerBackground1.webp");
+  background-size: cover;
+  width: 100%;
+  height: 874px;
+}
+.player-title{
+  padding-top: 50px;
+  text-shadow: rgba(0, 0, 0, 0.298039) 0px 5px 0px;
+  font-size: 76px;
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+}
+.player-people{
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.team-main{
+  width: 100%;
+  height: 579px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+.team-content{
+  width: 600px;
+  height: 145px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  display: flex;
+  padding-left: 30px;
+}
+.shib-border{
+  border: 5px solid;
+  height: 80px;
+  width: 50px;
+  background-color: #ff7900;
+  color: #ff7900;
+}
+.team-span{
+  padding-left: 20px;
+}
+.turtle-border{
+  border: 5px solid;
+  height: 80px;
+  width: 50px;
+  background-color: #0a477a;
+  color: #0a477a;
+}

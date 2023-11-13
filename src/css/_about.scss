@@ -1,0 +1,36 @@
+.about-title{
+  font-size: 60px;
+  color: white;
+  background-size: cover;
+  background: url(../assets/about-title.png);
+  position: absoulte;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  font-weight: bold;
+}
+.about-main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+.about-content{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.about-content-title{
+  color: #FF5454;
+  font-size:27px;
+  font-weight: bold;
+}
+.about-content-font{
+  color: black;
+  font-size :24px;
+  width: 925px;
+  font-weight: bold;
+}

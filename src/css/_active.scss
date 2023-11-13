@@ -1,0 +1,110 @@
+.active-main{
+  font-size: 60px;
+  color: white;
+  background-size: cover;
+  background: url(../assets/about-title.png);
+  position: absoulte;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+}
+.active-content{
+  font-size:  20px;
+}
+.active-container {
+  background: url("../assets/news.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.active-title {
+  font-size: 50px;
+  color: orange;
+  font-weight: bold;
+  padding-top: 60px;
+}
+
+.active-detail-title {
+  // padding:50px;
+  font-size: 30px;
+  color: #0A477A;
+  font-weight: bold;
+  font-style: italic;
+}
+.active-detail-content-size {
+  width: 480px;
+}
+.active-detail-main {
+  width: 900px;
+  max-width: 100%;
+  background-color: white;
+  display: flex;
+  // text-align: left !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.active-flex-main {
+  max-width: 1737px;
+  margin: auto;
+  height: auto;
+  // max-width: 100%;
+  padding: 30px 10px;
+}
+.active-detail-border{
+  border: 5px solid;
+  height: 40px;
+  width: 10px;
+  margin-right: 20px;
+  background-color: #ffad15;
+  color: #ffad15;
+}
+
+.active-box {
+  display: flex;
+  //
+  width: 930px;
+  height: 1200px;
+  overflow: hidden;
+}
+
+.active-flex-date-main {
+  max-width: 1737px;
+  margin: auto;
+  height: auto;
+  // max-width: 100%;
+  padding: 10px 10px;
+}
+
+.active-detail-date {
+  width: 900px;
+  max-width: 100%;
+  background-color: white;
+  display: flex;
+  // text-align: left !important;
+  justify-content: center !important;
+  padding-top: 100px;
+}
+
+.active-position-icon{
+  font-size: 50px;
+  padding-bottom: 20px;
+  color:  #ffad15;
+}
+.active-position-text{
+  display: flex;
+  padding-left: 20px;;
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+}
+
+.active-date-text{
+  font-size: 30px;
+  line-height: 90px;
+}

@@ -1,5 +1,5 @@
 <template>
-  <div id="q-app" style="min-height: 100vh">
+  <div id="q-app">
     <q-footer reveal elevated>
       <div class="footer">
         <img src="../assets/footer.png" width="123" height="45" />

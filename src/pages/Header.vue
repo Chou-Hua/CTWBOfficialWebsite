@@ -1,16 +1,34 @@
 <template>
   <div>
-    <q-header  elevated>
+    <q-header elevated>
       <q-toolbar class="bar-color">
-        <img src="../assets/logo.png" class="logo" width="200" height="100" @click="goToHome()"/>
+        <div class="logo">
+          <div class="container">
+          <img
+            src="../assets/logo.png"
+            width="150"
+            height="75"
+            @click="goToHome()"
+          />
+        </div>
+        </div>
         <!-- <q-toolbar-title>Quasar Framework</q-toolbar-title> -->
         <div class="nav-center">
           <q-tabs v-model="tab">
-            <q-tab class="btn-menu" name="teams" label="關於我們"></q-tab>
-            <q-tab class="btn-menu" name="teams" label="球隊"></q-tab>
-            <menuDropDown label="賽程活動" :itemsArray="activeItem" :setPadding="'15px'"/>
+            <q-tab class="btn-menu" name="teams" label="關於我們" @click="goToPage('about')"></q-tab>
+            <q-tab class="btn-menu" name="teams" label="球隊" @click="goToPage('team')"></q-tab>
+            <menuDropDown
+              label="賽程活動"
+              :itemsArray="activeItem"
+              :setPadding="'15px'"
+              @btnClick="goToPage('active')"
+            />
             <!-- <q-tab name="active" label=""></q-tab> -->
-            <menuDropDown label="規則" :itemsArray="rulesItem" :setPadding="'20px'"/>
+            <menuDropDown
+              label="規則"
+              :itemsArray="rulesItem"
+              :setPadding="'20px'"
+            />
             <!-- <q-tab name="rules" label="規則"></q-tab> -->
             <q-tab class="btn-menu" name="tools" label="球具"></q-tab>
             <q-tab class="btn-menu" name="blog" label="部落格"></q-tab>
@@ -38,17 +56,16 @@
 <script setup>
 import { defineComponent } from "vue";
 import menuDropDown from "src/components/menuDropDown.vue";
-import { useRouter } from 'vue-router';
+import { useRouter } from "vue-router";
 
 const router = useRouter();
 const goToHome = (item) => {
-  router.push('/')
-}
-const activeItem = [
-  {name:'精彩相片'}
-]
-const rulesItem = [
-  {name: '投球打法'}
-]
+  router.push("/");
+};
+const goToPage = (name) => {
+  router.push("/" + name);
+};
+const activeItem = [{ name: "精彩相片" }];
+const rulesItem = [{ name: "投球打法" }];
 defineComponent({});
 </script>

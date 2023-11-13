@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="homepage-title-text">
-      <div class="d-flex test">
+      <div class="d-flex">
         <div class="image-container">
           <img src="../../assets/workSpace.png" width="215px" height="215px" />
         </div>
@@ -15,7 +15,6 @@
 </template>
 
 <script>
-export default {};
 </script>
 
 <style></style>
