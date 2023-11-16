@@ -14,12 +14,12 @@
     </div>
 
     <div>
-      <div class="content-center">
+      <div class="content-center-rule">
         <div class="rules-title">
           <span>遊戲玩法</span>
         </div>
       </div>
-      <div class="content-center">
+      <div class="content-center-rule">
         <ol style="width: 925px;">
           <li
             v-for="(rule, index) in gameRlues"
@@ -33,12 +33,12 @@
     </div>
 
     <div>
-      <div class="content-center">
+      <div class="content-center-rule">
         <div class="rules-title">
           <span>打擊</span>
         </div>
       </div>
-      <div class="content-center">
+      <div class="content-center-rule">
         <ol style="width: 925px;">
           <li
             v-for="(bat, index) in Batting"
@@ -52,12 +52,12 @@
     </div>
 
     <div>
-      <div class="content-center">
+      <div class="content-center-rule">
         <div class="rules-title">
           <span>投手</span>
         </div>
       </div>
-      <div class="content-center">
+      <div class="content-center-rule">
         <ol style="width: 925px;">
           <li
             v-for="(pitch, index) in pitcher"
@@ -71,12 +71,12 @@
     </div>
 
     <div>
-      <div class="content-center">
+      <div class="content-center-rule">
         <div class="rules-title">
           <span>邊界場地規則</span>
         </div>
       </div>
-      <div class="content-center">
+      <div class="content-center-rule">
         <ol style="width: 925px;">
           <li
             v-for="(borderRule, index) in borderRlues"
@@ -90,12 +90,12 @@
     </div>
 
     <div>
-      <div class="content-center">
+      <div class="content-center-rule">
         <div class="rules-title">
           <span>野外場</span>
         </div>
       </div>
-      <div class="content-center">
+      <div class="content-center-rule">
         <ol style="width: 925px;">
           <li
             v-for="(outdoorRlue, index) in outdoorRlues"
@@ -109,12 +109,12 @@
     </div>
 
     <div>
-      <div class="content-center">
+      <div class="content-center-rule">
         <div class="rules-title">
           <span>跑者</span>
         </div>
       </div>
-      <div class="content-center">
+      <div class="content-center-rule">
         <ol style="width:925px;">
           <li
             v-for="(run, index) in runner"
@@ -128,12 +128,12 @@
     </div>
 
     <div>
-      <div class="content-center">
+      <div class="content-center-rule">
         <div class="rules-title">
           <span>防守</span>
         </div>
       </div>
-      <div class="content-center">
+      <div class="content-center-rule">
         <ol style="width:925px;">
           <li
             v-for="(def, index) in defense"
@@ -147,12 +147,12 @@
     </div>
 
     <div>
-      <div class="content-center">
+      <div class="content-center-rule">
         <div class="rules-title">
           <span>即時重播</span>
         </div>
       </div>
-      <div class="content-center">
+      <div class="content-center-rule">
         <ol style="width:925px;">
           <li
             v-for="(rep, index) in replay"

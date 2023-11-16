@@ -1,0 +1,50 @@
+.teach-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(100% 0, 93% 50%, 100% 100%, 0 100%, 7% 50%, 0% 0%);
+  font-size: 30px;
+  font-weight: bold;
+  height: 70px;
+  background-color: #ff7900;
+  color: white;
+  width: 300px;
+  white-space: nowrap;
+}
+
+.content-center-teach{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.padding-top-20{
+  padding-top: 20px;
+}
+
+.teach-title-main{
+  width: 100%;
+  max-width: 925px;
+  font-size: 20px;
+  text-align: justify;
+  font-weight: 500;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.teach-ball-content{
+  width: 100%;
+  display: flex;
+  max-width: 925px;
+  font-size: 20px;
+  text-align: justify;
+  font-weight: 500;
+  align-items: center;
+  padding-bottom: 80px;
+}
+.padding-left-120{
+  padding-left: 120px;
+}
+.movie-gif{
+  padding-left: 120px;
+  padding-bottom: 50px;
+}

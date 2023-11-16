@@ -10,6 +10,8 @@ const routes = [
       { path: '/active', component: () => import('src/pages/Active.vue') },
       { path: '/photo', component: () => import('src/pages/Photo.vue') },
       { path: '/rules', component: () => import('src/pages/Rules.vue') },
+      { path: '/teach', component: () => import('src/pages/Teach.vue') },
+      { path: '/notyet', component: () => import('src/pages/NotYet.vue') },
     ]
   },
 

@@ -30,18 +30,18 @@
               :itemsArray="rulesItem"
               :setPadding="'20px'"
               @btnClick="goToPage('rules')"
-              @clickDropDown="goToPage('peach')"
+              @clickDropDown="goToPage('teach')"
             />
             <!-- <q-tab name="rules" label="規則"></q-tab> -->
-            <q-tab class="btn-menu" name="tools" label="球具"></q-tab>
-            <q-tab class="btn-menu" name="blog" label="部落格"></q-tab>
+            <q-tab class="btn-menu" name="tools" label="球具" @click="goToPage('notyet')"></q-tab>
+            <q-tab class="btn-menu" name="blog" label="部落格" @click="goToPage('notyet')"></q-tab>
           </q-tabs>
         </div>
 
-        <i class="lab la-facebook icon-size text-dark"></i>
-        <i class="lab la-line icon-size text-dark"></i>
-        <i class="las la-shopping-bag icon-size text-dark"></i>
-        <i class="lab la-instagram icon-size text-dark"></i>
+        <i class="lab la-facebook icon-size text-dark" @click="openFB()"></i>
+        <i class="lab la-line icon-size text-dark" @click="openLine()"></i>
+        <i class="las la-shopping-bag icon-size text-dark" @click="openShopee()"></i>
+        <i class="lab la-instagram icon-size text-dark" @click="openIG()"></i>
       </q-toolbar>
     </q-header>
   </div>
@@ -68,6 +68,18 @@ const goToHome = (item) => {
 const goToPage = (name) => {
   router.push("/" + name);
 };
+const openFB = ()=>{
+  window.open('https://www.facebook.com/CTWB.wiffleball?locale=zh_CN', "_blank")
+}
+const openShopee = ()=>{
+  window.open('https://shopee.tw/kaien57699?entryPoint=OrderDetail', "_blank")
+}
+const openLine = ()=>{
+  window.open('https://shopee.tw/kaien57699?entryPoint=OrderDetail', "_blank")
+}
+const openIG = ()=>{
+  window.open('https://www.instagram.com/ctwb_tw.wiffleball_club/', "_blank")
+}
 const activeItem = [{ name: "精彩相片" }];
 const rulesItem = [{ name: "投球打法" }];
 defineComponent({});
