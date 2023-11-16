@@ -18,7 +18,7 @@
     >
       <q-item clickable v-for="(item,index) in itemsArray" :key="index">
         <q-item-section>
-          <q-item-label @click=clickDropDown()>{{ item.name }}</q-item-label>
+          <q-item-label @click="clickDropDown()">{{ item.name }}</q-item-label>
         </q-item-section>
       </q-item>
     </q-list>

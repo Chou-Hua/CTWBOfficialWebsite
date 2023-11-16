@@ -22,12 +22,15 @@
               :itemsArray="activeItem"
               :setPadding="'15px'"
               @btnClick="goToPage('active')"
+              @clickDropDown="goToPage('photo')"
             />
             <!-- <q-tab name="active" label=""></q-tab> -->
             <menuDropDown
               label="規則"
               :itemsArray="rulesItem"
               :setPadding="'20px'"
+              @btnClick="goToPage('rules')"
+              @clickDropDown="goToPage('peach')"
             />
             <!-- <q-tab name="rules" label="規則"></q-tab> -->
             <q-tab class="btn-menu" name="tools" label="球具"></q-tab>

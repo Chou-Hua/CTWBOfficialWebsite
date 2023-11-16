@@ -1,0 +1,27 @@
+.rules-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 80px;
+  clip-path: polygon(100% 0, 93% 50%, 100% 100%, 0 100%, 7% 50%, 0% 0%);
+  font-size: 30px;
+  font-weight: bold;
+  height: 70px;
+  background-color: #ff7900;
+  color: white;
+  width: 300px;
+  white-space: nowrap;
+}
+.rules-main{
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.content-center{
+  padding: 30px 0 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
