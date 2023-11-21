@@ -64,7 +64,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref,onMounted } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -105,6 +105,14 @@ const photoArray = ref([
   { url: "/src/assets/photo15.png" },
   { url: "/src/assets/photo16.png" },
 ]);
+// 在組件掛載後，動態加載圖片
+onMounted(async () => {
+  await Promise.all(
+    photoArray.value.map(async (photo) => {
+      photo.img = (await import(`.${photo.url}`)).default;
+    })
+  );
+});
 const modules = [FreeMode, Navigation];
 const openModal = (index) => {
   console.log(index);
