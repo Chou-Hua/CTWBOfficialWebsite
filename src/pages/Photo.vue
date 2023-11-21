@@ -18,7 +18,7 @@
       class="mySwiper2"
     >
       <swiper-slide v-for="(photo, index) in photoArray" :key="index">
-        <img :src="photo.url" />
+        <img :src="getImgUrl(photo.url)" />
       </swiper-slide>
     </swiper>
     <swiper
@@ -31,14 +31,14 @@
       class="mySwiper"
     >
       <swiper-slide v-for="(photo, index) in photoArray" :key="index">
-        <img :src="photo.url" />
+        <img :src="getImgUrl(photo.url)" />
       </swiper-slide>
     </swiper>
   </div>
 </template>
 
 <script>
-import { ref,onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -58,29 +58,33 @@ export default {
     const setThumbsSwiper = (swiper) => {
       thumbsSwiper.value = swiper;
     };
-
+    const getImgUrl = (url) => {
+      return new URL(`../assets/${url}`, import.meta.url).href;
+    };
     const photoArray = ref([
-      { url: "/src/assets/photo2.png" },
-      { url: "/src/assets/photo3.png" },
-      { url: "/src/assets/photo4.png" },
-      { url: "/src/assets/photo5.png" },
-      { url: "/src/assets/photo6.png" },
-      { url: "/src/assets/photo7.png" },
-      { url: "/src/assets/photo8.png" },
-      { url: "/src/assets/photo9.png" },
-      { url: "/src/assets/photo10.png" },
-      { url: "/src/assets/photo11.png" },
-      { url: "/src/assets/photo12.png" },
-      { url: "/src/assets/photo13.png" },
-      { url: "/src/assets/photo14.png" },
-      { url: "/src/assets/photo15.png" },
-      { url: "/src/assets/photo16.png" },
+      { url: "photo1.png" },
+      { url: "photo2.png" },
+      { url: "photo3.png" },
+      { url: "photo4.png" },
+      { url: "photo5.png" },
+      { url: "photo6.png" },
+      { url: "photo7.png" },
+      { url: "photo8.png" },
+      { url: "photo9.png" },
+      { url: "photo10.png" },
+      { url: "photo11.png" },
+      { url: "photo12.png" },
+      { url: "photo13.png" },
+      { url: "photo14.png" },
+      { url: "photo15.png" },
+      { url: "photo16.png" },
     ]);
     const modules = [FreeMode, Navigation, Thumbs];
     return {
       thumbsSwiper,
       setThumbsSwiper,
       modules,
+      getImgUrl,
       photoArray,
     };
   },
