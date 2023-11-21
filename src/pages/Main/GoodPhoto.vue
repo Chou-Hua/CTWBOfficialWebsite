@@ -84,11 +84,9 @@ const clickManyPhoto = () => {
   router.push("/" + "photo");
 };
 const getImgUrl = (url) =>{
-  return new URL(url,import.meta.url).href
+  return new URL(`../../assets/${url}`,import.meta.url).href
 }
-const photoArray = ref([
-  // { url: "@/assets/IMG_9500.png" },
-  // { url: "@/assets/IMG_9486.png" },
+const photoArray1 = ref([
   { url: "/src/assets/IMG_9500.png" },
   { url: "/src/assets/IMG_9486.png" },
   { url: "/src/assets/IMG_9406.png" },
@@ -109,6 +107,28 @@ const photoArray = ref([
   { url: "/src/assets/photo14.png" },
   { url: "/src/assets/photo15.png" },
   { url: "/src/assets/photo16.png" },
+]);
+const photoArray = ref([
+  { url: "IMG_9500.png" },
+  { url: "IMG_9486.png" },
+  { url: "IMG_9406.png" },
+  { url: "IMG_9286.png" },
+  { url: "photo1.png" },
+  { url: "photo2.png" },
+  { url: "photo3.png" },
+  { url: "photo4.png" },
+  { url: "photo5.png" },
+  { url: "photo6.png" },
+  { url: "photo7.png" },
+  { url: "photo8.png" },
+  { url: "photo9.png" },
+  { url: "photo10.png" },
+  { url: "photo11.png" },
+  { url: "photo12.png" },
+  { url: "photo13.png" },
+  { url: "photo14.png" },
+  { url: "photo15.png" },
+  { url: "photo16.png" },
 ]);
 const modules = [FreeMode, Navigation];
 const openModal = (index) => {
