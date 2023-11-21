@@ -52,7 +52,18 @@ module.exports = configure(function (ctx) {
         browser: [ 'es2019', 'edge88', 'firefox78', 'chrome87', 'safari13.1' ],
         node: 'node16'
       },
+      // 擴展 Vite 配置
+      extend({ isClient, isDev }, { /* otherConfig */ }) {
+        // 在這裡進行 Vite 的配置
+        const aliasPath = process.env.VITE_ALIAS_PATH || 'src';
+        const alias = isDev ? { '@': path.resolve(__dirname, aliasPath) } : {};
 
+        return {
+          resolve: {
+            alias,
+          },
+        };
+      },
       vueRouterMode: 'hash', // available values: 'hash', 'history'
       // vueRouterBase,
       // vueDevtools,
