@@ -77,14 +77,6 @@ export default {
       { url: "/src/assets/photo16.png" },
     ]);
     const modules = [FreeMode, Navigation, Thumbs];
-    // 在組件掛載後，動態加載圖片
-    onMounted(async () => {
-      await Promise.all(
-        photoArray.value.map(async (photo) => {
-          photo.img = (await import(`.${photo.url}`)).default;
-        })
-      );
-    });
     return {
       thumbsSwiper,
       setThumbsSwiper,
