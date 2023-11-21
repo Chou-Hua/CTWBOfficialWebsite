@@ -31,7 +31,7 @@
       class="mySwiper"
     >
       <swiper-slide v-for="(photo, index) in photoArray" :key="index">
-        <img :src="photo.url" />
+        <img :src="(photo.url)" />
       </swiper-slide>
     </swiper>
   </div>
@@ -44,6 +44,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
 export default {
@@ -57,22 +58,23 @@ export default {
     const setThumbsSwiper = (swiper) => {
       thumbsSwiper.value = swiper;
     };
+
     const photoArray = ref([
-      { url: "src/assets/photo2.JPG" },
-      { url: "src/assets/photo3.JPG" },
-      { url: "src/assets/photo4.JPG" },
-      { url: "src/assets/photo5.JPG" },
-      { url: "src/assets/photo6.JPG" },
-      { url: "src/assets/photo7.JPG" },
-      { url: "src/assets/photo8.JPG" },
-      { url: "src/assets/photo9.JPG" },
-      { url: "src/assets/photo10.JPG" },
-      { url: "src/assets/photo11.JPG" },
-      { url: "src/assets/photo12.JPG" },
-      { url: "src/assets/photo13.JPG" },
-      { url: "src/assets/photo14.JPG" },
-      { url: "src/assets/photo15.JPG" },
-      { url: "src/assets/photo16.JPG" },
+      { url: "src/assets/photo2.png" },
+      { url: "src/assets/photo3.png" },
+      { url: "src/assets/photo4.png" },
+      { url: "src/assets/photo5.png" },
+      { url: "src/assets/photo6.png" },
+      { url: "src/assets/photo7.png" },
+      { url: "src/assets/photo8.png" },
+      { url: "src/assets/photo9.png" },
+      { url: "src/assets/photo10.png" },
+      { url: "src/assets/photo11.png" },
+      { url: "src/assets/photo12.png" },
+      { url: "src/assets/photo13.png" },
+      { url: "src/assets/photo14.png" },
+      { url: "src/assets/photo15.png" },
+      { url: "src/assets/photo16.png" },
     ]);
     const modules = [FreeMode, Navigation, Thumbs];
 

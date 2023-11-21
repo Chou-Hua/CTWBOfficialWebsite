@@ -23,7 +23,15 @@
             </swiper-slide>
           </swiper>
         </div>
-        <q-btn class="btn-font-size" color="orange" label="更多精彩相片" size="20px" rounded dense @click="clickManyPhoto()"/>
+        <q-btn
+          class="btn-font-size"
+          color="orange"
+          label="更多精彩相片"
+          size="20px"
+          rounded
+          dense
+          @click="clickManyPhoto()"
+        />
         <!-- Image Modal -->
         <q-dialog v-model="icon" full-width full-height>
           <div style="background-color: white">
@@ -65,7 +73,6 @@ import "swiper/css/thumbs";
 import { useRouter } from "vue-router";
 import { FreeMode, Navigation } from "swiper/modules";
 
-
 const router = useRouter();
 const icon = ref(false);
 let currentImageIndex = ref(0);
@@ -73,30 +80,30 @@ let currentImageIndex = ref(0);
 const closeModal = () => {
   icon.value = false;
 };
-const clickManyPhoto = ()=>{
-  router.push("/" + 'photo');
-}
+const clickManyPhoto = () => {
+  router.push("/" + "photo");
+};
 const photoArray = ref([
-  { url: "src/assets/IMG_9500.JPG" },
-  { url: "src/assets/IMG_9486.JPG" },
-  { url: "src/assets/IMG_9406.JPG" },
-  { url: "src/assets/IMG_9286.JPG" },
-  { url: "src/assets/photo1.JPG" },
-  { url: "src/assets/photo2.JPG" },
-  { url: "src/assets/photo3.JPG" },
-  { url: "src/assets/photo4.JPG" },
-  { url: "src/assets//photo5.JPG" },
-  { url: "src/assets/photo6.JPG" },
-  { url: "src/assets/photo7.JPG" },
-  { url: "src/assets/photo8.JPG" },
-  { url: "src/assets/photo9.JPG" },
-  { url: "src/assets/photo10.JPG" },
-  { url: "src/assets/photo11.JPG" },
-  { url: "src/assets/photo12.JPG" },
-  { url: "src/assets/photo13.JPG" },
-  { url: "src/assets/photo14.JPG" },
-  { url: "src/assets/photo15.JPG" },
-  { url: "src/assets/photo16.JPG" },
+  { url: "src/assets/IMG_9500.png" },
+  { url: "src/assets/IMG_9486.png" },
+  { url: "src/assets/IMG_9406.png" },
+  { url: "src/assets/IMG_9286.png" },
+  { url: "src/assets/photo1.png" },
+  { url: "src/assets/photo2.png" },
+  { url: "src/assets/photo3.png" },
+  { url: "src/assets/photo4.png" },
+  { url: "src/assets//photo5.png" },
+  { url: "src/assets/photo6.png" },
+  { url: "src/assets/photo7.png" },
+  { url: "src/assets/photo8.png" },
+  { url: "src/assets/photo9.png" },
+  { url: "src/assets/photo10.png" },
+  { url: "src/assets/photo11.png" },
+  { url: "src/assets/photo12.png" },
+  { url: "src/assets/photo13.png" },
+  { url: "src/assets/photo14.png" },
+  { url: "src/assets/photo15.png" },
+  { url: "src/assets/photo16.png" },
 ]);
 const modules = [FreeMode, Navigation];
 const openModal = (index) => {
