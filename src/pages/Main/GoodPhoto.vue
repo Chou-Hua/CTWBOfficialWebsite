@@ -19,7 +19,7 @@
             class="mySwiper3"
           >
             <swiper-slide v-for="(photo, index) in photoArray" :key="index">
-              <img :src="photo.url" @click="openModal(index)" />
+              <img :src="getImgUrl(photo.url)" @click="openModal(index)" />
             </swiper-slide>
           </swiper>
         </div>
@@ -64,7 +64,7 @@
 </template>
 
 <script setup>
-import { ref,onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -84,9 +84,11 @@ const clickManyPhoto = () => {
   router.push("/" + "photo");
 };
 const getImgUrl = (url) =>{
-  return new URL(url, import.meta.url).href;
+  return new URL(url,import.meta.url).href
 }
 const photoArray = ref([
+  // { url: "@/assets/IMG_9500.png" },
+  // { url: "@/assets/IMG_9486.png" },
   { url: "/src/assets/IMG_9500.png" },
   { url: "/src/assets/IMG_9486.png" },
   { url: "/src/assets/IMG_9406.png" },
