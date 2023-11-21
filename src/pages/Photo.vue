@@ -58,22 +58,21 @@ export default {
       thumbsSwiper.value = swiper;
     };
     const photoArray = ref([
-      { url: "src/assets/goodPhoto/photo1.JPG" },
-      { url: "src/assets/goodPhoto/photo2.JPG" },
-      { url: "src/assets/goodPhoto/photo3.JPG" },
-      { url: "src/assets/goodPhoto/photo4.JPG" },
-      { url: "src/assets/goodPhoto/photo5.JPG" },
-      { url: "src/assets/goodPhoto/photo6.JPG" },
-      { url: "src/assets/goodPhoto/photo7.JPG" },
-      { url: "src/assets/goodPhoto/photo8.JPG" },
-      { url: "src/assets/goodPhoto/photo9.JPG" },
-      { url: "src/assets/goodPhoto/photo10.JPG" },
-      { url: "src/assets/goodPhoto/photo11.JPG" },
-      { url: "src/assets/goodPhoto/photo12.JPG" },
-      { url: "src/assets/goodPhoto/photo13.JPG" },
-      { url: "src/assets/goodPhoto/photo14.JPG" },
-      { url: "src/assets/goodPhoto/photo15.JPG" },
-      { url: "src/assets/goodPhoto/photo16.JPG" },
+      { url: "src/assets/photo2.JPG" },
+      { url: "src/assets/photo3.JPG" },
+      { url: "src/assets/photo4.JPG" },
+      { url: "src/assets/photo5.JPG" },
+      { url: "src/assets/photo6.JPG" },
+      { url: "src/assets/photo7.JPG" },
+      { url: "src/assets/photo8.JPG" },
+      { url: "src/assets/photo9.JPG" },
+      { url: "src/assets/photo10.JPG" },
+      { url: "src/assets/photo11.JPG" },
+      { url: "src/assets/photo12.JPG" },
+      { url: "src/assets/photo13.JPG" },
+      { url: "src/assets/photo14.JPG" },
+      { url: "src/assets/photo15.JPG" },
+      { url: "src/assets/photo16.JPG" },
     ]);
     const modules = [FreeMode, Navigation, Thumbs];
 
