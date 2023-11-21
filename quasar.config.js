@@ -58,19 +58,19 @@ module.exports = configure(function (ctx) {
       // vueOptionsAPI: false,
 
       // rebuildCache: true, // rebuilds Vite/linter/etc cache on startup
-      // 擴展 Vite 配置
-      extend({ isClient, isDev }, { /* otherConfig */ }) {
-        // 在這裡進行 Vite 的配置
-        const aliasPath = process.env.VITE_ALIAS_PATH || 'src';
-        const alias = isDev ? { '@': path.resolve(__dirname, aliasPath) } : {};
+      // // 擴展 Vite 配置
+      // extend({ isClient, isDev }, { /* otherConfig */ }) {
+      //   // 在這裡進行 Vite 的配置
+      //   const aliasPath = process.env.VITE_ALIAS_PATH || 'src';
+      //   const alias = isDev ? { '@': path.resolve(__dirname, aliasPath) } : {};
 
-        return {
-          resolve: {
-            alias,
-          },
-        };
-      },
-      publicPath: '/',
+      //   return {
+      //     resolve: {
+      //       alias,
+      //     },
+      //   };
+      // },
+      // publicPath: '/',
       // analyze: true,
       // env: {},
       // rawDefine: {}

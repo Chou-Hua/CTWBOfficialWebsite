@@ -52,7 +52,7 @@
             >
               <swiper-slide v-for="(photo, index) in photoArray" :key="index">
                 <div style="display: flex; align-items: center">
-                  <img :src="getImgUrl(photo.url)" width="1200" height="800" />
+                  <q-img  :src="getImgUrl(photo.url)" width="1200" height="800" />
                 </div>
               </swiper-slide>
             </swiper>
