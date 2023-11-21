@@ -60,21 +60,21 @@ export default {
     };
 
     const photoArray = ref([
-      { url: "src/assets/photo2.png" },
-      { url: "src/assets/photo3.png" },
-      { url: "src/assets/photo4.png" },
-      { url: "src/assets/photo5.png" },
-      { url: "src/assets/photo6.png" },
-      { url: "src/assets/photo7.png" },
-      { url: "src/assets/photo8.png" },
-      { url: "src/assets/photo9.png" },
-      { url: "src/assets/photo10.png" },
-      { url: "src/assets/photo11.png" },
-      { url: "src/assets/photo12.png" },
-      { url: "src/assets/photo13.png" },
-      { url: "src/assets/photo14.png" },
-      { url: "src/assets/photo15.png" },
-      { url: "src/assets/photo16.png" },
+      { url: "/src/assets/photo2.png" },
+      { url: "/src/assets/photo3.png" },
+      { url: "/src/assets/photo4.png" },
+      { url: "/src/assets/photo5.png" },
+      { url: "/src/assets/photo6.png" },
+      { url: "/src/assets/photo7.png" },
+      { url: "/src/assets/photo8.png" },
+      { url: "/src/assets/photo9.png" },
+      { url: "/src/assets/photo10.png" },
+      { url: "/src/assets/photo11.png" },
+      { url: "/src/assets/photo12.png" },
+      { url: "/src/assets/photo13.png" },
+      { url: "/src/assets/photo14.png" },
+      { url: "/src/assets/photo15.png" },
+      { url: "/src/assets/photo16.png" },
     ]);
     const modules = [FreeMode, Navigation, Thumbs];
 
