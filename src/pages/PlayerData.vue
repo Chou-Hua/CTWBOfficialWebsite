@@ -1,25 +1,28 @@
 <template>
+  <div class="q-pa-md">
+    <div class="q-gutter-sm">
+      <q-checkbox v-model="selection" val="海龜隊" label="海龜隊" color="cyan" />
+      <q-checkbox
+        v-model="selection"
+        val="狂熱者"
+        label="狂熱者"
+        color="red"
+      />
+      <q-checkbox v-model="selection" val="火柴隊" label="火柴隊" color="orange" />
+      <q-checkbox v-model="selection" val="自由球員" label="自由球員" color="teal" />
+    </div>
+  </div>
   <div>
     <q-table
       title="球員數據"
-      :rows="rows"
-      flat
+      :rows="filteredRows"
       separator="cell"
-      bordered
-      class="my-table"
+      :table-class="'my-table'"
       :columns="columns"
       :rows-per-page-options="[0]"
       v-model:pagination="pagination"
       row-key="team"
     >
-      <!-- <template v-slot:header="props">
-        <q-tr :props="props">
-          <q-th v-for="col in props.cols" :key="col.name">
-            {{ col.label }}
-          </q-th>
-        </q-tr>
-      </template> -->
-
       <template v-slot:body="props">
         <q-tr :props="props">
           <q-td
@@ -37,7 +40,8 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref,computed } from "vue";
+const selection = ref(['海龜隊','火柴隊','狂熱者','自由球員'])
 const pagination = ref({
   rowsPerPage: 0,
 });
@@ -364,6 +368,18 @@ const getTeamColorClasses = (row) => {
       break;
   }
 };
+// 計算屬性，根據 checkbox 的選擇來篩選資料
+const filteredRows = computed(() => {
+  const selectedTeams = Array.isArray(selection.value) ? selection.value : [selection.value];
+
+  if (selectedTeams.length === 0) {
+    // 如果沒有選擇，返回所有資料
+    return rows.value;
+  } else {
+    // 否則，返回符合選擇條件的資料
+    return rows.value.filter(row => selectedTeams.includes(row.team));
+  }
+});
 </script>
 
 <style lang="scss">
@@ -382,13 +398,18 @@ const getTeamColorClasses = (row) => {
   color: white;
 }
 .my-table {
+  font-weight: bold;
+  height: 500px;
+  td {
+    font-size: 20px !important;
+  }
   thead {
     color: white;
   }
-  height: 500px;
   th {
     position: sticky;
     top: 0;
+    font-size: 20px;
     background-color: #003264; /* 修改為你想要的背景顏色 */
     z-index: 1;
   }
