@@ -11,6 +11,7 @@ const routes = [
       { path: '/photo', component: () => import('src/pages/Photo.vue') },
       { path: '/rules', component: () => import('src/pages/Rules.vue') },
       { path: '/teach', component: () => import('src/pages/Teach.vue') },
+      { path: '/playerData', component: () => import('src/pages/PlayerData.vue') },
       { path: '/notyet', component: () => import('src/pages/NotYet.vue') },
     ]
   },

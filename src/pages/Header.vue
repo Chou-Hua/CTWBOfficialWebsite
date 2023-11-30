@@ -35,6 +35,7 @@
             <!-- <q-tab name="rules" label="規則"></q-tab> -->
             <q-tab class="btn-menu" name="tools" label="球具" @click="goToPage('notyet')"></q-tab>
             <q-tab class="btn-menu" name="blog" label="部落格" @click="goToPage('notyet')"></q-tab>
+            <q-tab class="btn-menu" name="playerData" label="球員數據" @click="goToPage('playerData')"></q-tab>
           </q-tabs>
         </div>
 
