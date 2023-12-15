@@ -22,6 +22,9 @@
       />
     </div>
   </div>
+  <div style="padding: 20px">
+    <addPlayerDataDialog />
+  </div>
   <div>
     <q-table
       title="球員數據"
@@ -53,6 +56,8 @@
 import { ref, computed, onMounted, watch, nextTick } from "vue";
 import { useQuasar } from "quasar";
 import { usePlayerStore } from "src/stores/playerData";
+import addPlayerDataDialog from "src/components/addPlayerDataDialog.vue";
+import { fakePlayerData } from "src/stores/fakeData";
 
 const selection = ref(["海龜隊", "火柴隊", "狂熱者", "自由球員"]);
 const pagination = ref({
@@ -135,228 +140,7 @@ const columns = ref([
     sort: (a, b) => a - b,
   },
 ]);
-// const rows = ref([
-//   {
-//     team: "海龜隊",
-//     name: "莊信宏",
-//     number: "18",
-//     hit: "1",
-//     hitP: "0",
-//     beConveyed: "10",
-//     homeRun: "0",
-//     strikeOut: "9",
-//     conveyed: "9",
-//   },
-//   {
-//     team: "海龜隊",
-//     name: "張愷恩",
-//     number: "10",
-//     hit: "0",
-//     hitP: "0",
-//     beConveyed: "0",
-//     homeRun: "0",
-//     strikeOut: "0",
-//     conveyed: "0",
-//   },
-//   {
-//     team: "海龜隊",
-//     name: "簡振宇",
-//     number: "14",
-//     hit: "0",
-//     hitP: "0",
-//     beConveyed: "0",
-//     homeRun: "0",
-//     strikeOut: "0",
-//     conveyed: "0",
-//   },
-//   {
-//     team: "海龜隊",
-//     name: "吳家宇",
-//     number: "2",
-//     hit: "0",
-//     hitP: "0",
-//     beConveyed: "0",
-//     homeRun: "0",
-//     strikeOut: "0",
-//     conveyed: "0",
-//   },
-//   {
-//     team: "海龜隊",
-//     name: "曾譯寬",
-//     number: "1",
-//     hit: "0",
-//     hitP: "0",
-//     beConveyed: "0",
-//     homeRun: "0",
-//     strikeOut: "0",
-//     conveyed: "0",
-//   },
-//   {
-//     team: "狂熱者",
-//     name: "川哥",
-//     number: "111",
-//     hit: "9",
-//     hitP: "16",
-//     beConveyed: "28",
-//     homeRun: "6",
-//     strikeOut: "48",
-//     conveyed: "10",
-//   },
-//   {
-//     team: "狂熱者",
-//     name: "聖和",
-//     number: "69",
-//     hit: "6",
-//     hitP: "13",
-//     beConveyed: "18",
-//     homeRun: "5",
-//     strikeOut: "38",
-//     conveyed: "18",
-//   },
-//   {
-//     team: "狂熱者",
-//     name: "致臻",
-//     number: "26",
-//     hit: "0",
-//     hitP: "0",
-//     beConveyed: "3",
-//     homeRun: "0",
-//     strikeOut: "5",
-//     conveyed: "7",
-//   },
-//   {
-//     team: "狂熱者",
-//     name: "禹竹",
-//     number: "19",
-//     hit: "0",
-//     hitP: "0",
-//     beConveyed: "0",
-//     homeRun: "0",
-//     strikeOut: "0",
-//     conveyed: "0",
-//   },
-//   {
-//     team: "狂熱者",
-//     name: "簡偉家",
-//     number: "24",
-//     hit: "0",
-//     hitP: "3",
-//     beConveyed: "21",
-//     homeRun: "1",
-//     strikeOut: "0",
-//     conveyed: "2",
-//   },
-//   {
-//     team: "火柴隊",
-//     name: "廖敏佑",
-//     number: "23",
-//     hit: "4",
-//     hitP: "9",
-//     beConveyed: "2",
-//     homeRun: "2",
-//     strikeOut: "15",
-//     conveyed: "20",
-//   },
-//   {
-//     team: "火柴隊",
-//     name: "吳肇華",
-//     number: "11",
-//     hit: "4",
-//     hitP: "5",
-//     beConveyed: "24",
-//     homeRun: "1",
-//     strikeOut: "12",
-//     conveyed: "37",
-//   },
-//   {
-//     team: "火柴隊",
-//     name: "許友哲",
-//     number: "51",
-//     hit: "4",
-//     hitP: "0",
-//     beConveyed: "8",
-//     homeRun: "0",
-//     strikeOut: "2",
-//     conveyed: "6",
-//   },
-//   {
-//     team: "火柴隊",
-//     name: "陳禹勛",
-//     number: "56",
-//     hit: "9",
-//     hitP: "9",
-//     beConveyed: "10",
-//     homeRun: "3",
-//     strikeOut: "21",
-//     conveyed: "20",
-//   },
-//   {
-//     team: "火柴隊",
-//     name: "周晏廷",
-//     number: "7",
-//     hit: "0",
-//     hitP: "2",
-//     beConveyed: "2",
-//     homeRun: "1",
-//     strikeOut: "2",
-//     conveyed: "5",
-//   },
-//   {
-//     team: "火柴隊",
-//     name: "廖建宏",
-//     number: "66",
-//     hit: "0",
-//     hitP: "0",
-//     beConveyed: "0",
-//     homeRun: "0",
-//     strikeOut: "0",
-//     conveyed: "0",
-//   },
-//   {
-//     team: "火柴隊",
-//     name: "陳宥任",
-//     number: "16",
-//     hit: "1",
-//     hitP: "2",
-//     beConveyed: "3",
-//     homeRun: "1",
-//     strikeOut: "3",
-//     conveyed: "0",
-//   },
-//   {
-//     team: "自由球員",
-//     name: "湯幃丞",
-//     number: "0",
-//     hit: "0",
-//     hitP: "0",
-//     beConveyed: "0",
-//     homeRun: "0",
-//     strikeOut: "0",
-//     conveyed: "0",
-//   },
-//   {
-//     team: "自由球員",
-//     name: "方振旭",
-//     number: "30",
-//     hit: "0",
-//     hitP: "0",
-//     beConveyed: "0",
-//     homeRun: "0",
-//     strikeOut: "0",
-//     conveyed: "0",
-//   },
-//   {
-//     team: "自由球員",
-//     name: "余嘉興",
-//     number: "99",
-//     hit: "0",
-//     hitP: "0",
-//     beConveyed: "5",
-//     homeRun: "0",
-//     strikeOut: "0",
-//     conveyed: "0",
-//   },
-// ]);
+// const fakeData = ref(fakePlayerData);
 
 const $q = useQuasar();
 
@@ -380,7 +164,6 @@ const getCellClasses = (columnName, row) => {
   switch (columnName) {
     case "team":
       return getTeamColorClasses(row.team);
-    // 添加其他列的条件判断...
     default:
       return "";
   }
@@ -401,10 +184,29 @@ const getTeamColorClasses = (row) => {
       break;
   }
 };
+const refreshTable = async () => {
+  try {
+    $q.loading.show({
+      delay: 0, // ms
+    });
+    await nextTick();
+    await playerStore.getPlayerData();
+  } catch (error) {
+    console.error("Error fetching player data:", error);
+  } finally {
+    $q.loading.hide();
+  }
+};
 watch(
   () => playerStore.playerAllData,
   (newPlayerData) => {
     playerData.value = newPlayerData;
+  }
+);
+watch(
+  () => playerStore.updatePlayerData,
+  () => {
+    refreshTable();
   }
 );
 // 計算屬性，根據 checkbox 的選擇來篩選資料

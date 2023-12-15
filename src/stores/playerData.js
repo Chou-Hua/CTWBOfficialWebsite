@@ -18,7 +18,8 @@ export const usePlayerStore = defineStore("playerData", {
     chooseTeam: ["狂熱者", "火柴隊", "海龜隊", "自由球員"],
     addPlayerData: null,
     initPlayerData: null,
-    addPlayerData: JSON.parse(JSON.stringify(initPlayerData))
+    addPlayerData: JSON.parse(JSON.stringify(initPlayerData)),
+    updatePlayerData: false
   }),
   actions: {
     async getPlayerData() {
@@ -31,14 +32,24 @@ export const usePlayerStore = defineStore("playerData", {
         console.error("Error fetching player data:", error);
       }
     },
+    async postAddOnePlayerData(body) {
+      try {
+        const response = await api.post("/addPlayer",body);
+        if (response.status === 200) {
+          console.log(response.data);
+        }
+      } catch (error) {
+        console.error("Error fetching player data:", error);
+      }
+    },
     setPlayerData(data) {
       this.addPlayerData[data.name] = data.team;
     },
     resetAddPlayerData() {
-      // 這裡使用 Object.assign 或 Object.fromEntries
       this.addPlayerData = JSON.parse(JSON.stringify(initPlayerData));
-      // 或者
-      // this.addPlayerData = Object.fromEntries(Object.entries(this.state.addPlayerData).map(([key, value]) => [key, '']));
     },
+    updateRefrshPageFlag(){
+      this.updatePlayerData = !this.updatePlayerData;
+    }
   },
 });

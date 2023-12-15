@@ -1,8 +1,8 @@
 <template>
-  <div style="padding-bottom: 50px; padding-left: 25px;">
+  <div style="padding-bottom: 50px; padding-left: 0px">
     <q-btn label="新增球員及數據" color="primary" @click="alert = true" />
   </div>
-  <form @submit.prevent.stop="onSubmit" class="q-gutter-md">
+  <form @submit.prevent.stop="onSubmit()" class="q-gutter-md">
     <q-dialog v-model="alert" persistent>
       <q-card style="width: 700px; max-width: 80vw">
         <q-card-section class="row items-center q-pb-none">
@@ -142,14 +142,15 @@
 </template>
 
 <script setup>
-import { ref, watch } from "vue";
+import { ref } from "vue";
 import { usePlayerStore } from "src/stores/playerData";
+import { useQuasar } from "quasar";
 
 const playerStore = usePlayerStore();
 
 const teamModel = ref("自由球員");
 const nameModel = ref("");
-const numberModel = ref("");
+const numberModel = ref("0");
 const hitModel = ref("0");
 const hitPModel = ref("0");
 const beConveyedModel = ref("0");
@@ -178,11 +179,19 @@ const initInputField = () => {
   strikeOutModel.value = "0";
   conveyedModel.value = "0";
 };
+
+const processNumberHaveZero = (num) => {
+  return num.replace(/^0+/, "");
+};
+
 const clearData = () => {
   initInputField();
   playerStore.resetAddPlayerData();
 };
-const onSubmit = () => {
+
+const $q = useQuasar();
+
+const onSubmit = async () => {
   nameModelRef.value.validate();
   hitModelRef.value.validate();
   hitPModelRef.value.validate();
@@ -190,7 +199,7 @@ const onSubmit = () => {
   homeRunModelRef.value.validate();
   strikeOutModelRef.value.validate();
   conveyedModelRef.value.validate();
-  const passSubmit =
+  const failedSubmit =
     nameModelRef.value.hasError ||
     hitModelRef.value.hasError ||
     hitPModelRef.value.hasError ||
@@ -198,12 +207,25 @@ const onSubmit = () => {
     homeRunModelRef.value.hasError ||
     strikeOutModelRef.value.hasError ||
     conveyedModelRef.value.hasError;
-  if (passSubmit) {
+  if (failedSubmit) {
   } else {
-    playerStore.setPlayerData({ name: "team", team: teamModel.value });
-    console.log(playerStore.addPlayerData);
+    try {
+      $q.loading.show({
+        delay: 0, // ms
+      });
+      playerStore.setPlayerData({ name: "team", team: teamModel.value });
+      await playerStore.postAddOnePlayerData(playerStore.addPlayerData);
+      playerStore.updateRefrshPageFlag();
+    } catch (error) {
+      console.error("Error fetching player data:", error);
+    } finally {
+      $q.loading.hide();
+      alert.value = false;
+      clearData();
+    }
   }
 };
+
 const selectTeam = (value) => {
   switch (value) {
     case "team":
@@ -213,30 +235,37 @@ const selectTeam = (value) => {
       playerStore.setPlayerData({ name: "name", team: nameModel.value });
       break;
     case "number":
+      numberModel.value = processNumberHaveZero(numberModel.value);
       playerStore.setPlayerData({ name: "number", team: numberModel.value });
       break;
     case "hit":
+      hitModel.value = processNumberHaveZero(hitModel.value);
       playerStore.setPlayerData({ name: "hit", team: hitModel.value });
       break;
     case "hitP":
+      hitPModel.value = processNumberHaveZero(hitPModel.value);
       playerStore.setPlayerData({ name: "hitP", team: hitPModel.value });
       break;
     case "beConveyed":
+      beConveyedModel.value = processNumberHaveZero(beConveyedModel.value);
       playerStore.setPlayerData({
         name: "beConveyed",
         team: beConveyedModel.value,
       });
       break;
     case "homeRun":
+      homeRunModel.value = processNumberHaveZero(homeRunModel.value);
       playerStore.setPlayerData({ name: "homeRun", team: homeRunModel.value });
       break;
     case "strikeOut":
+      strikeOutModel.value = processNumberHaveZero(strikeOutModel.value);
       playerStore.setPlayerData({
         name: "strikeOut",
         team: strikeOutModel.value,
       });
       break;
     case "conveyed":
+      conveyedModel.value = processNumberHaveZero(conveyedModel.value);
       playerStore.setPlayerData({
         name: "conveyed",
         team: conveyedModel.value,
