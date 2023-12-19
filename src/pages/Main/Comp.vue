@@ -10,6 +10,7 @@
               src="../../assets/icon03.png"
               class="animated1"
               ref="compImgBat"
+              alt="CTWB-台灣威浮球俱樂部宣傳用的ICON"
             />
           </div>
         </h5>
@@ -23,6 +24,7 @@
               src="../../assets/icon02.png"
               class="animated1"
               ref="compImgBall"
+              alt="CTWB-台灣威浮球俱樂部宣傳用的ICON"
             />
           </div>
         </h5>
@@ -36,6 +38,7 @@
               src="../../assets/icon01.png"
               class="animated1"
               ref="compImgLand"
+              alt="CTWB-台灣威浮球俱樂部宣傳用的ICON"
             />
           </div>
         </h5>

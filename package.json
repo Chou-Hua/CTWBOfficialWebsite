@@ -1,8 +1,8 @@
 {
   "name": "wiffleball",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "Taiwan WiffleBall Club",
+  "description": "A website introducing Wiffleball By CTWB-台灣威浮球俱樂部 ",
+  "productName": "CTWB-台灣威浮球俱樂部",
   "author": "AndyWu<w8633460@gmail.com>",
   "private": true,
   "scripts": {

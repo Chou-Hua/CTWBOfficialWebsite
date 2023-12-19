@@ -9,7 +9,7 @@
 
       <div class="d-flex news-flex-main">
         <div class="box">
-          <img src="../../assets/news-shirt.png" class="responsive-image" />
+          <img src="../../assets/news-shirt.png" class="responsive-image" alt="CTWB-台灣威浮球俱樂部衣服宣傳照片"/>
         </div>
         <div class="news-detail-main">
           <div class="news-detail-content-size">
@@ -35,13 +35,13 @@
           </div>
         </div>
         <div class="box">
-          <img src="../../assets/news-land.png" class="land-image" />
+          <img src="../../assets/news-land.png" class="land-image" alt="CTWB-台灣威浮球俱樂部球場規格宣傳照片"/>
         </div>
       </div>
 
       <div class="d-flex news-flex-main">
         <div class="box">
-          <img src="../../assets/newsplayer.png" class="land-image" />
+          <img src="../../assets/newsplayer.png" class="land-image" alt="CTWB-台灣威浮球俱樂部選手宣傳照片"/>
         </div>
         <div class="news-detail-main">
           <div class="news-detail-content-size">

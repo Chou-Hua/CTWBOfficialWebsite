@@ -2,7 +2,7 @@
   <div id="q-app">
     <q-footer reveal elevated>
       <div class="footer">
-        <img src="../assets/footer.png" width="123" height="45" />
+        <img src="../assets/footer.png" width="123" height="45" alt="CTWB-台灣威浮球俱樂部頁腳的ICON"/>
         <div class="logo-text">台灣威浮球俱樂部</div>
         <q-space></q-space>
         <div>
