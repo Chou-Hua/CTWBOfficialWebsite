@@ -9,6 +9,7 @@
             width="150"
             height="75"
             @click="goToHome()"
+            alt="CTWB-台灣威浮球俱樂部的導引列表的ICON"
           />
         </div>
         </div>

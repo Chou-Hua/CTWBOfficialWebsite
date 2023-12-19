@@ -1,6 +1,6 @@
 <template>
   <div class="photo-main-title">
-    <img src="../assets/workSpace2.webp" />
+    <img src="../assets/workSpace2.webp" alt="CTWB-台灣威浮球俱樂部的ICON"/>
     2023 - ​CTWB規則說明
   </div>
   <div>
@@ -10,7 +10,7 @@
       </div>
     </div>
     <div style="display: flex; justify-content: center; align-items: center; padding-bottom: 50px;">
-      <img src="../assets/load.webp" />
+      <img src="../assets/load.webp" alt="CTWB-台灣威浮球俱樂部的球場規格圖片"/>
     </div>
 
     <div>

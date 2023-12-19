@@ -7,6 +7,7 @@
           width="160"
           height="160"
           class="good-photo-img"
+          alt="CTWB-台灣威浮球俱樂部精彩照片中的ICON"
         />
         <!-- <img src="../../assets/goodPhoto/photo (1).JPG" -->
         <p class="good-photo-content">歡迎新舊玩家一同參與</p>
@@ -19,7 +20,7 @@
             class="mySwiper3"
           >
             <swiper-slide v-for="(photo, index) in photoArray" :key="index">
-              <img :src="getImgUrl(photo.url)" @click="openModal(index)" />
+              <img :src="getImgUrl(photo.url)" @click="openModal(index)" alt="CTWB-台灣威浮球俱樂部精彩照片中的各個圖片"/>
             </swiper-slide>
           </swiper>
         </div>

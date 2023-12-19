@@ -4,7 +4,7 @@
     <div>
       <div class="about-content">
         <div>
-          <img src="../assets/footer.png" width="412" height="151" />
+          <img src="../assets/footer.png" width="412" height="151" alt="CTWB-台灣威浮球俱樂部介紹網頁的頁腳" />
         </div>
         <span class="about-content-title">Chinese Taiwan Wiffle Ball</span>
       </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="photo-main-title">
-    <img src="../assets/workSpace2.webp" />
+    <img src="../assets/workSpace2.webp" alt="CTWB-台灣威浮球俱樂部介紹團隊照片中的ICON"/>
     精彩照片
   </div>
   <div class="photo-main">
@@ -18,7 +18,7 @@
       class="mySwiper2"
     >
       <swiper-slide v-for="(photo, index) in photoArray" :key="index">
-        <img :src="getImgUrl(photo.url)" />
+        <img :src="getImgUrl(photo.url)" alt="CTWB-台灣威浮球俱樂部的精采照片"/>
       </swiper-slide>
     </swiper>
     <swiper
@@ -31,7 +31,7 @@
       class="mySwiper"
     >
       <swiper-slide v-for="(photo, index) in photoArray" :key="index">
-        <img :src="getImgUrl(photo.url)" />
+        <img :src="getImgUrl(photo.url)" alt="CTWB-台灣威浮球俱樂部的精采照片的輪播圖"/>
       </swiper-slide>
     </swiper>
   </div>

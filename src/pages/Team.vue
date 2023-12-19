@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="team-title">
-      <img src="../assets/workSpace2.webp" />
+      <img src="../assets/workSpace2.webp" alt="CTWB-台灣威浮球俱樂部聯盟介紹的ICON"/>
       聯盟球隊介紹
     </div>
     <div>
       <div class="team-main">
         <div>
-          <img src="../assets/shib.webp" />
+          <img src="../assets/shib.webp" alt="CTWB-台灣威浮球俱樂部聯盟介紹的火柴隊"/>
         </div>
         <div>
-          <img src="../assets/shibTeam.webp" />
+          <img src="../assets/shibTeam.webp" alt="CTWB-台灣威浮球俱樂部聯盟介紹的火柴隊的文字描述"/>
           <div class="team-content">
             <div class="d-flex">
               <div class="shib-border"></div>
@@ -26,10 +26,10 @@
         <span class="player-title"> TEAM PLAYERS</span>
         <div>
           <div class="player-people">
-            <img src="../assets/player1.webp" />
-            <img src="../assets/player2.webp" />
-            <img src="../assets/player3.webp" />
-            <img src="../assets/player4.webp" />
+            <img src="../assets/player1.webp" alt="CTWB-台灣威浮球俱樂部聯盟介紹的火柴隊的選手圖"/>
+            <img src="../assets/player2.webp" alt="CTWB-台灣威浮球俱樂部聯盟介紹的火柴隊的選手圖"/>
+            <img src="../assets/player3.webp" alt="CTWB-台灣威浮球俱樂部聯盟介紹的火柴隊的選手圖"/>
+            <img src="../assets/player4.webp" alt="CTWB-台灣威浮球俱樂部聯盟介紹的火柴隊的選手圖"/>
           </div>
         </div>
       </div>
@@ -37,10 +37,10 @@
     <div>
       <div class="team-main">
         <div>
-          <img src="../assets/turtle.webp" />
+          <img src="../assets/turtle.webp" alt="CTWB-台灣威浮球俱樂部聯盟介紹的海龜隊"/>
         </div>
         <div>
-          <img src="../assets/turtleT.webp" />
+          <img src="../assets/turtleT.webp" alt="CTWB-台灣威浮球俱樂部聯盟介紹的海龜隊的文字描述"/>
           <div class="team-content">
             <div class="d-flex">
               <div class="turtle-border"></div>
@@ -55,10 +55,10 @@
         <span class="player-title"> TEAM PLAYERS</span>
         <div>
           <div class="player-people">
-            <img src="../assets/tplayer2.webp" />
-            <img src="../assets/tplayer3.webp" />
-            <img src="../assets/tplayer4.webp" />
-            <img src="../assets/tplayer1.webp" />
+            <img src="../assets/tplayer2.webp" alt="CTWB-台灣威浮球俱樂部聯盟介紹的海龜隊的選手圖"/>
+            <img src="../assets/tplayer3.webp" alt="CTWB-台灣威浮球俱樂部聯盟介紹的海龜隊的選手圖"/>
+            <img src="../assets/tplayer4.webp" alt="CTWB-台灣威浮球俱樂部聯盟介紹的海龜隊的選手圖"/>
+            <img src="../assets/tplayer1.webp" alt="CTWB-台灣威浮球俱樂部聯盟介紹的海龜隊的選手圖"/>
           </div>
         </div>
       </div>

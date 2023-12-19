@@ -35,13 +35,13 @@
           </div>
         </div>
         <div class="box">
-          <img src="../assets/newgame.webp" class="land-image" />
+          <img src="../assets/newgame.webp" class="land-image" alt="CTWB-台灣威浮球俱樂部首頁的宣傳大圖"/>
         </div>
       </div>
 
       <div class="d-flex active-flex-date-main">
         <div class="active-box">
-          <img src="../assets/gamedate.webp" class="land-image" />
+          <img src="../assets/gamedate.webp" class="land-image" alt="CTWB-台灣威浮球俱樂部的賽程表"/>
         </div>
         <div class="active-detail-date">
           <div class="active-detail-content-size">
